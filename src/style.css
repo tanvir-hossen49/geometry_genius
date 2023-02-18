@@ -1,0 +1,46 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");
+
+body {
+  max-width: 1380px;
+  margin: 0 auto;
+  font-family: "Inter", sans-serif;
+}
+
+/**
+* ! Blog page style here
+*/
+h2,
+h3 {
+  margin: 0;
+}
+a {
+  text-decoration: none;
+}
+.header {
+  margin: 40px;
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 19px 45px;
+  background-color: #e7f4fb;
+  border-radius: 8px;
+}
+.page-title {
+  font-weight: 700;
+  font-size: 40px;
+  color: black;
+}
+.sub-title {
+  font-weight: 500;
+  font-size: 30px;
+  color: #979fa3;
+}
+.header .navbar .blogpage {
+  padding: 9px 38px;
+  background-color: #1090d8;
+  color: #fff;
+  border-radius: 8px;
+  font-weight: 700;
+}
