@@ -44,3 +44,6 @@ a {
   border-radius: 8px;
   font-weight: 700;
 }
+#cardContainer > div:hover {
+  background-color: #ebebeb;
+}

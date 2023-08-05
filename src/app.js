@@ -1,38 +1,10 @@
-window.onload = () => {
-  itemsHover();
-};
-
-// ! Count area calculated items
+// Count area calculated items
 let count = 1;
 
-// ! Generate HEX Color
-const randomColor = () => {
-  // ! random number between 0 - 256
-  var r = Math.floor(Math.random() * 256);
-  var g = Math.floor(Math.random() * 256);
-  var b = Math.floor(Math.random() * 256);
-  //   ! Convert rgb to hax color
-  var haxColor = `#${r.toString(16)}${g.toString(16)}${b.toString(16)}`;
-  return haxColor;
-};
-
-// ! Hover on card items
-function itemsHover() {
-  const card = document.getElementById("cardContainer").children;
-  for (let item of card) {
-    item.addEventListener("mouseenter", () => {
-      item.style.backgroundColor = randomColor();
-    });
-
-    item.addEventListener("mouseleave", (e) => {
-      item.style.backgroundColor = "#fff";
-    });
-  }
-}
-
-// ! Calculate Area
+// Calculate Area
 const calculateArea = (firstInput, lastInput, button) => {
   let area;
+
   if (
     button.id === "triangle" ||
     button.id === "rhombus" ||
@@ -48,7 +20,7 @@ const calculateArea = (firstInput, lastInput, button) => {
   updateDom(area.toFixed(2), button);
 };
 
-// ! Update DOM
+// Update DOM
 const updateDom = (area, button) => {
   const calculatedItems = document.getElementById("calculated-area");
   const geometryName =
@@ -66,9 +38,9 @@ const updateDom = (area, button) => {
   `;
 };
 
-// ! Event Listener
-document.querySelectorAll(".calculate-btn").forEach((button) => {
-  button.addEventListener("click", (e) => {
+// Event Listener
+document.querySelectorAll(".calculate-btn").forEach(button => {
+  button.addEventListener("click", e => {
     const firstInput =
       button.previousElementSibling.lastElementChild.firstElementChild
         .firstElementChild;
